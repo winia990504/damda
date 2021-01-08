@@ -1,0 +1,312 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+  }
+  
+  body {
+    background-color: #ffffff;
+    font-family: 'Noto Sans KR';
+    color: #000000
+  }
+  
+  /*헤더 css*/
+  
+  .logo img {
+    width: 150px;
+    height: 50px;
+    margin: 0 20px;
+  }
+  #top {
+    float: left;
+    margin: 25px 10px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#dropdown {
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+    text-align: left;
+    z-index:1;
+    top: 20px;
+}
+
+#dropdown a{
+    color: rgb(0, 0, 0);
+}
+
+#top:hover > ul,
+ul li ul:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    visibility: visible;
+    opacity:1;
+    display: block;
+}
+
+#item {
+    clear: both;
+    width: 210px;
+    color: rgb(0, 0, 0);
+    height: 30px;
+    padding-left: -100px;
+    position: relative; 
+    z-index:1;
+}
+
+section {
+    height: max-content;
+}
+
+.logo a {
+    color: rgb(0, 0, 0);
+    position: relative;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.logo a:visited {
+    color: rgb(0, 0, 0);
+}
+
+nav {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: max-content;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul a {
+    position: relative;
+    padding: 6px 12px;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+}
+
+ul a:visited {
+    color: rgb(0, 0, 0);
+}
+
+ul a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: all .5s ease-out;
+}
+
+ul a:hover::after {
+    width: 100%
+}
+  @media screen and (max-width: 900px) {
+    nav {
+      flex-direction: column;
+    }
+  }
+  
+  /*컨텐츠 css*/
+  .content {
+    margin: 0 0;
+    height: 60%;
+    border: 1px solid green;
+    overflow: hidden;
+  }
+  
+  .sidetab {
+    width: 15%;
+    height: 150px;
+    border: 1px solid purple;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    float: left;
+    margin-left: 7vw;
+    margin-right: 1vw;
+  }
+
+  .sidetab a {
+    color: grey;
+  }
+
+  .welcome {
+    font-size: 15px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: 1px solid blue;
+    float: left;
+  }
+
+  /*인사말 css*/
+  #face {
+    text-align: center;
+    margin: 0px 10px;
+  }
+
+  #face img {
+    border: 1px solid black;
+  }
+
+  #hi {
+    margin-top: 30px;
+    border: 1px solid purple;
+  }
+
+  #hi tr, td {
+    background-color: #00000000;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  @media screen and (min-width: 900px) {
+    #hi {
+      max-width: 1000px;
+      margin-left: 50px;
+    }
+
+    #hi p,#hi img {
+      margin-left: 50px;
+    }
+
+    .reservation {
+      margin-left: 50px;
+    }
+  }
+
+  /*오시는 길 css*/
+  #route a {
+    color: black;
+  }
+  
+
+  /*예약하기 버튼*/
+  .reservation {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 3px 10px 3px 10px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 0.1s;
+    text-shadow: 1px 3px rgba(0, 0, 0, 0.534);
+  }
+
+  .reservation:active {
+    transform: translateY(3px);
+  }
+  
+
+  /*인포 css*/
+  #sep {
+    font-size: 23px;
+  }
+
+  #time li {
+    list-style-type: none;
+  }
+  #special {
+    font-size: 13px;
+  }
+  
+  #fee table {
+    border-collapse: collapse;
+    width: auto;
+  }
+    
+  #fee td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+  }
+    
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  #caution li {
+    padding: 5px;
+    list-style-type: none;
+  }
+
+/*푸터 css*/
+footer {
+  bottom: 0;
+  left: 0;
+  right:0;
+  background: #111;
+  height: auto;
+  width: auto;
+  font-family: "Open Sans";
+  padding-top: 10px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 15px;
+}
+
+.footer-bottom {
+  background: #000;
+  width:auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 10px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
