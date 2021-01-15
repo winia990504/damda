@@ -758,7 +758,8 @@ background: #2196f3;
 @media screen and (max-width: 767px) {
 
   .boddy {
-    margin-top: -170px;
+    /*margin-top: -170px;*/
+      margin-top: -30%;
     display:flex;
     justify-content: center;
     align-items: center;
